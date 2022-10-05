@@ -1,0 +1,82 @@
+.header-descr__title {
+    visibility: hidden;
+    animation: visibility 0.8s forwards 1.88s;
+}
+.header-descr__p p:nth-child(1) {
+    visibility: hidden;
+    animation: visibility 0.8s forwards 2.38s;
+}
+.header-descr__p p:nth-child(2) {
+    visibility: hidden;
+    animation: visibility 0.8s forwards 2.08s;
+}
+.header-descr__p p:nth-child(3) {
+    visibility: hidden;
+    animation: visibility 0.8s forwards 2.78s;
+}
+.header-descr__title:after, 
+.header-descr__p p:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    visibility: visible;
+    opacity: 1;
+    animation: a-ltr-after 2s cubic-bezier(.77,0,.18,1) forwards;
+    transform: translateX(-101%);
+}
+
+.header-descr__title:before,
+.header-descr__p p:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+    opacity: 1;
+    background: var(--bg-color);
+    animation: a-ltr-before 2s cubic-bezier(.77,0,.18,1) forwards;
+    transform: translateX(0);
+}
+
+.header-descr__title:before,
+.header-descr__title:after {
+    animation-delay: 0.9s;
+}
+.header-descr__p p:nth-of-type(1):after,
+.header-descr__p p:nth-of-type(1):before {
+    animation-delay: 1.4s;
+}
+
+.header-descr__p p:nth-of-type(2):after,
+.header-descr__p p:nth-of-type(2):before {
+    animation-delay: 1.1s;
+}
+.header-descr__p p:nth-of-type(3):after,
+.header-descr__p p:nth-of-type(3):before {
+    animation-delay: 1.8s;
+}
+
+
+@keyframes a-ltr-after{
+    0% {transform: translateX(-100%)}
+    100% {transform: translateX(101%)}
+}
+
+@keyframes a-ltr-before{
+    0% {transform: translateX(0)}
+    100% {transform: translateX(200%)}
+}
+
+
+
+@keyframes visibility {
+    0% { visibility: hidden; }
+    100% { visibility: visible; }
+}
+

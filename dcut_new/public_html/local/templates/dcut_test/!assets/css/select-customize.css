@@ -1,0 +1,70 @@
+.select {
+    position: relative;
+    z-index: 20;
+}
+
+.select.is-active .select__body {
+    display: block;
+}
+
+.select__header {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: 1px solid #006FB6;
+    border-radius: 5px; 
+    background-color: transparent;
+    min-height: 35px;
+}
+
+.select__current {
+    padding-left: 11px;
+    padding-right: 6px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    color: #006FB6;
+}
+.select__icon {
+    margin-left: 6px;
+    margin-right: 9px;
+}
+
+.select__icon svg {
+    
+    fill: #006FB6;
+    vertical-align: middle;
+}
+
+.select__body {
+    border: 1px solid #006FB6;
+    border-radius: 5px;
+    display: none;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 130%;
+    background-color: #fff;
+    box-shadow: 0px 2px 6px rgba(8, 35, 48, 0.18);
+}
+
+.select__item {
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 18px;
+    min-height: 35px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.select__item span {
+    padding: 0 6px 0 11px;
+}
+
+.select__item:hover {
+    background-color: rgba(0, 111, 182, 0.1);
+    color: #006FB6;
+}

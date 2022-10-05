@@ -1,0 +1,272 @@
+.coin {
+    padding-top: 60px;
+    padding-bottom: 92px;
+    margin: 0 auto;
+    /* display: flex;
+    justify-content: center; */
+    overflow: hidden;
+}
+
+.coin-container {
+    display: flex;
+    justify-content: center;
+}
+
+
+.coin-row,
+.coin-row-two,
+.coin-row-three {
+    margin: 0 -15px;
+    display: flex;
+    align-items: center;
+}
+.coin-col {
+    animation: coincolLeftTo 0.2s ease forwards;
+}
+.coin-col,
+.coin-col-two,
+.coin-col-three {
+    padding: 0 15px;
+    display: flex;
+    flex: 1 1 auto;
+    position: relative;
+}
+
+.coin-col:after,
+.coin-col-two:after,
+.coin-col-three:after {
+    content: '';
+    background: linear-gradient(rgba(196, 196, 196, 0) 0%, rgba(196, 196, 196, 0.5106) 15.63%, #C4C4C4 48.96%, rgba(196, 196, 196, 0.4592) 84.9%, rgba(196, 196, 196, 0) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 1px;
+}
+
+.coin-col:first-child:after {
+    display: none;
+}
+
+.coin-item,
+.coin-item-two,
+.coin-item-three {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.coin-img {
+    width: 112px;
+}
+.coin-img-hover {
+    display: none;
+}
+
+.coin-text {
+    padding-left: 12px;
+    font-size: 13px;
+    line-height: 16px;
+    color: #1D1D1D;
+    width: 236px;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s;
+}
+
+/* @KEYFRAMES, HOVER ДЛЯ COIN-CONTAINER (РАСШИРЕНИЕ КОЛОНКИ И ПОЯВЛЕНИЕ ТЕКСТА) 
+======================================================================= */
+@keyframes coincolRightTo {
+    from { width: 142px; }
+    to { width: 378px; }
+}
+@keyframes coincolLeftTo {
+    from { width: 378px; }
+    to { width: 142px; }
+}
+
+.coin-col:hover { animation: coincolRightTo 0.2s ease forwards; }
+.coin-col:hover .coin-text { visibility: visible; opacity: 1; transition-delay: 0.1s; }
+.coin-col:hover .coin-img { display: none; }
+.coin-col:hover .coin-img-hover { display: block; }
+
+/* COIN ДЛЯ МАКС ШИРИНЫ 1350px
+======================================================================= */
+.coin-container-two {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.coin-row-two {
+    width: min-content;
+    overflow: hidden;
+}
+.coin-row-two:first-child {
+    margin-bottom: 30px;
+}
+.coin-col-two {
+    padding: 0 56px;
+    animation: coincolTwoLeftTo 0.2s ease 0.2s forwards;
+}
+
+/* @KEYFRAMES, HOVER ДЛЯ COIN-CONTAINER (1350px) (РАСШИРЕНИЕ КОЛОНКИ И ПОЯВЛЕНИЕ ТЕКСТА) 
+======================================================================= */
+@keyframes coincolTwoRightTo {
+    from { width: 224px; }
+    to { width: 460px; }
+}
+@keyframes coincolTwoLeftTo {
+    from { width: 460px; }
+    to { width: 224px; }
+}
+.coin-col-two:hover {
+    animation: coincolTwoRightTo 0.2s ease forwards;
+}
+.coin-col-two:hover .coin-text { visibility: visible; opacity: 1; transition-delay: 0.2s; }
+.coin-col-two:hover .coin-img { display: none; }
+.coin-col-two:hover .coin-img-hover { display: block; }
+
+/* COIN ДЛЯ МАКС ШИРИНЫ 1070px
+======================================================================= */
+
+.coin-container-three, 
+.coin-container-four {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.coin-row-three,
+.coin-row-four {
+    margin-bottom: 30px;
+    width: min-content;
+    overflow: hidden;
+    animation: none;
+}
+.coin-col-three {
+    flex: 1 1 50%;
+    animation: none;
+}
+.coin-row-three .coin-text {
+    visibility: visible;
+    opacity: 1;
+}
+.coin-row-three:last-child {
+    margin-bottom: 0;
+}
+.coin-col-three:hover .coin-img { display: none; }
+.coin-col-three:hover .coin-img-hover { display: block; }
+/* COIN ДЛЯ МАКС ШИРИНЫ 707px
+======================================================================= */
+.coin-container-four {
+    padding: 0 15px;
+    width: 100%;
+    display: block;
+}
+.coin-row-four {
+    margin-left: 0;
+    margin-right: -15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: visible;
+}
+.coin-col-four {
+    padding: 0 15px;
+    margin-bottom: 15px;
+    display: flex;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+    justify-content: center;
+    animation: none;
+}
+.coin-item-four {
+    display: flex;
+    align-items: flex-start;
+}
+/* .coin-col-four .coin-text {
+    width: 100%;
+} */
+/* @MEDIA QUERIES
+====================================================================== */
+@media all and (max-width: 1350px) {
+    .coin-container { display: none; }
+    .coin-container-two { display: flex; }
+}
+@media all and (max-width: 1070px) {
+    .coin-container-three { display: flex; }
+    .coin-container { display: none; }
+    .coin-container-two { display: none; }
+    /* .coin { padding-top: 105px; } */
+}
+@media all and (min-width: 1070px) {
+    .coin-container-three { display: none; }
+    .coin-container { display: none; }
+    .coin-container-two { display: flex; }
+}
+@media all and (min-width: 1351px) {
+    .coin-container { display: flex; }
+    .coin-container-two { display: none; }
+}
+@media all and (max-width: 750px) {
+    .coin-container { display: none; }
+    .coin-container-two { display: none; }
+    .coin-container-three { display: none; }
+    .coin-container-four { display: block; }
+    .coin-item { margin-bottom: 20px; align-items: center; animation: none; }
+    .coin-text { max-width: 100%; display: flex; animation: none; visibility: visible; opacity: 1; }
+    .coin-item-four img { height: auto; animation: none; }
+    .coin-item:hover { animation: none; }
+    .coin-item:hover .coin-text { animation: none; }
+    .coin-item:hover .coin-img { display: none; }
+    .coin-item:hover .coin-img-hover { display: block; }
+    .coin { padding-bottom: 10px; }
+}
+@media all and (max-width: 576px) {
+    .coin-item-four img { width: 90px; height: auto; animation: none; }
+}
+@media all and (max-width: 410px) {
+    .coin-row-four { margin-left: 0; }
+    .coin-item-four img { width: 130px; }
+    .coin-col-four { margin-bottom: 30px; display: flex; -ms-flex: 0 0 50%; flex: 0 0 50%; max-width: 50%; justify-content: center; }
+}
+@media all and (max-width: 345px) {
+    .coin-row-four { margin-left: 0; }
+    .coin-item-four img { width: 120px; }
+    .coin-col-four { margin-bottom: 30px; display: flex; -ms-flex: 0 0 50%; flex: 0 0 50%; max-width: 50%; justify-content: center; }
+}
+@media all and (max-width: 576px) {
+    .coin-item-four img { height: auto; animation: none; }
+}
+
+@media all and (min-width: 700px) {
+    .coin { padding-top: 90px; }
+}
+@media all and (min-width: 750px) {
+    .coin-container-four { display: none; }
+    .coin-container-three { display: flex; }
+    .coin-container-two { display: none; }
+    .coin-container { display: none; }
+}
+@media all and (min-width: 1070px) {
+    .coin-container-three { display: none; }
+    .coin-container { display: none; }
+    .coin-container-two { display: flex; }
+}
+@media all and (min-width: 1150px) {
+    .coin { padding-top: 70px; }
+}
+@media all and (min-width: 1351px) {
+    .coin-container { display: flex; }
+    .coin-container-two { display: none; }
+}

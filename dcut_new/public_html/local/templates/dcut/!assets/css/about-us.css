@@ -1,0 +1,236 @@
+.about-us {
+    margin-top: 53px;
+}
+
+.section-title {
+    margin-bottom: 36px;
+    padding-bottom: 11px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    display: flex;
+    color: #3C3C41;
+    border-bottom: 1px solid #DAE0E3;
+}
+
+.coin-title {
+    font-size: 22px;
+}
+.coin-title span {
+    text-align: center;
+}
+
+.about-us-wrapper {
+    display: flex;
+    align-items: flex-start;
+}
+
+.about-us .sidebar {
+    margin-right: 30px;
+    flex: 1 0 auto;
+    max-width: 370px;
+}
+
+.sidebar {
+    min-width: 370px;
+}
+
+.sidebar-accordion {}
+
+.sidebar-accordion_item {
+
+}
+
+.sidebar-accordion_item__title {
+    margin-top: 10px;
+    padding: 7px 7px 7px 19px;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 19px;
+    background: #F2F2F2;
+    color: #5D5D5D;
+    min-height: 58px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.sidebar-accordion_item__title.first-child {
+    margin-top: 0;
+}
+
+.sidebar-accordion_item__title span {
+    max-width: 300px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    transition-delay: 0s;
+}
+
+.sidebar-accordion_item__title .svg-plus,
+.sidebar-accordion_item__title .svg-minus {
+    position: absolute;
+    top: 50%;
+    right: 18px;
+    fill: #006FB6;
+    stroke: transparent;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+.sidebar-accordion_item__title .svg-minus {
+    opacity: 0;
+}
+.sidebar-accordion_item__title .svg-plus {
+    opacity: 1;
+}
+
+.sidebar-accordion_item__title.active {
+    background: #006FB6;
+    color: white;
+}
+
+.sidebar-accordion_item__title.active .svg-plus {
+    opacity: 0;
+}
+.sidebar-accordion_item__title.active .svg-minus {
+    opacity: 1;
+    stroke: white;
+    fill: white;
+}
+
+.sidebar-accordion_item__text {
+    margin: 0 10px;
+    padding: 16px 9px 20px 13px;
+    position: relative;
+    font-size: 12px;
+    line-height: 20px;
+    color: #5D5D5D;
+    display: none;
+    border-bottom: 1px solid #F2F2F2;
+    border-right: 1px solid #F2F2F2;
+    border-left: 1px solid #F2F2F2;
+
+}
+
+.sidebar-accordion_item__title:hover {
+    background-color: #006FB6;
+}
+
+.sidebar-accordion_item__title:hover > span {
+    color: #F2F2F2;
+}
+
+.sidebar-accordion_item__title:hover .svg-plus {
+    stroke: transparent;
+    fill: #F2F2F2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* content */
+.about-us .content {
+    margin-bottom: 66px;
+}
+.about-us .content p {
+    margin-bottom: 24px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #5D5D5D;
+    width: 100%;
+}
+
+.about-us .content .content-flex {
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+}
+.about-us .content .content-flex .flex-img {
+    margin-right: 30px;
+    max-width: 371px;
+    flex: 1 1 auto;
+}
+.about-us .content .content-flex .flex-img img {
+    max-width: 100%;
+    height: auto;
+}
+.about-us .content .content-flex .flex-text {
+    font-size: 14px;
+    line-height: 20px;
+    color: #5D5D5D;
+    max-width: 356px;
+}
+
+
+
+
+
+
+/* counter */
+.counter-wrapper {
+    margin-bottom: 102px;
+    background: url(../img/about-us/couner-wrapper.webp) no-repeat center;
+    background-size: cover;
+}
+.counter-wrapper .counter:after {
+    background-color: black;
+    opacity: 0.6;
+}
+.counter-wrapper .counter-text {
+    color: white;
+}
+.counter-wrapper .counter-number {
+    color: #4FB8ED;
+}
+
+
+
+
+
+@media all and (max-width: 1150px) {
+    .about-us-wrapper { flex-direction: column; margin-bottom: 60px; }
+    .about-us .sidebar { order: 2; max-width: 100%; width: 100%; min-width: auto; }
+    .about-us .content { margin-bottom: 30px; }
+}
+@media all and (max-width: 640px) {
+    .about-us .content .content-flex { flex-direction: column; align-items: flex-start; }
+    .about-us .content .content-flex .flex-img { max-width: 100%; margin-bottom: 30px; }
+    .about-us .content .content-flex .flex-text { max-width: 100%; }
+}
+@media all and (max-width: 400px) {
+    .sidebar-accordion_item__title {
+        padding: 7px 30px 7px 19px;
+        font-size: 12px;
+    }
+}

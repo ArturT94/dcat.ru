@@ -1,0 +1,177 @@
+body {
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Montserrat';
+    box-sizing: border-box;
+    height: 100%;
+}
+header.static-page {
+    padding-bottom: 63px;
+    height: auto;
+    position: relative;
+    z-index: 111;  
+}
+
+.header-services {
+    background: url(../img/static-page/services-bg.webp) no-repeat center;
+    background-size: cover;
+}
+
+.header-projects {
+    background: url(../img/static-page/projects-bg.webp) no-repeat center;
+    background-size: cover;
+}
+.header-blog {
+    background: url(../img/static-page/blog-bg.webp) no-repeat center;
+    background-size: cover;
+}
+.header-about-us {
+    background: url(../img/static-page/about-us-bg.webp) no-repeat center;
+    background-size: cover;
+}
+.header-contacts {
+    background: url(../img/static-page/contacts-bg.webp) no-repeat center;
+    background-size: cover;
+}
+.header-conditions {
+    background: url(../img/static-page/conditions-bg.webp) no-repeat center;
+    background-size: cover;
+}
+.header-category { 
+    background: url(../img/static-page/catalog-bg.webp) no-repeat center;
+    background-size: cover;
+}
+.header-profile {
+    background: url(../img/static-page/profile-bg.webp) no-repeat center;
+    background-size: cover;
+}
+
+
+/* header.static-page:before,
+header.profile-page:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: black;
+    backdrop-filter: blur(7px);
+    opacity: 0.5;
+    z-index: -1;
+} */
+.static-page-title {
+    margin: 0 auto;
+    margin-top: 38px;
+    z-index: 2;
+    max-width: 100%;
+    background: linear-gradient(90deg, rgba(123, 123, 123, 0) 20%, rgb(24, 24, 24, 0.6) 50.52%, rgba(123, 123, 123, 0) 80%);
+    /* mix-blend-mode: color-burn; */
+
+}
+
+.static-page-title h1 {
+    padding: 14px 0 16px 0;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 49px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-align: center;
+    position: relative;
+    z-index: 5;
+}
+
+.static-page .nav-menu {
+    z-index: 4;
+}
+.static-page .headerLogoSearch-links a .circle span {
+    margin-bottom: -10px;
+}
+
+/* nav-links
+=============================================================================== */
+.nav-links {
+    padding: 12px 0 12px 0;
+    background: #F2F2F2;
+}
+
+.nav-links__container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.nav-links a,
+.nav-links span {
+    font-size: 13px;
+    line-height: 16px;
+    color: #47474D;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+}
+.nav-links a:hover,
+.nav-links span:hover {
+    color: #006FB6;
+}
+.nav-links svg {
+    margin: 0 8px;
+    transform: rotate(-90deg);
+    vertical-align: middle;
+}
+
+.nav-links-link {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-links-link:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    background: #006FB6;
+    height: 1px;
+    -webkit-transition-property: right;
+    transition-property: right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.nav-links-link:hover:before,
+.nav-links-link:focus:before,
+.nav-links-link:active:before {
+    right: 0;
+}
+
+.nav-links__container {
+    display: flex;
+    align-items: flex-start;
+}
+
+@media all and (max-width: 440px) {
+    .nav-links a, .nav-links > span { white-space: normal; }
+}
+
+@media all and (max-width: 768px) {
+    .static-page-title h1 { font-size: 34px; padding: 0; }
+}
+@media all and (max-width: 576px) {
+    .static-page-title h1 { font-size: 31px; padding: 0; }
+}
+@media all and (max-width: 500px) {
+    .static-page-title h1 { font-size: 24px; padding: 0; }
+}
+@media all and (max-width: 400px) {
+    .static-page-title h1 { font-size: 20px; line-height: 25px; padding: 4px 15px 4px 15px; }
+}

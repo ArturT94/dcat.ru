@@ -1,0 +1,19 @@
+a:focus, a:hover {
+    text-decoration: none;
+}
+.form-control{
+    height: inherit!important;
+}
+.btn-link--success:hover{
+    color: #44C373;
+}
+/*.pz-radio:nth-child(n+1){*/
+/*    margin-top: 20px;*/
+/*}*/
+.cart-step a{
+    text-decoration: none;
+}
+.novalid .realBtn{
+    background-color: #EDEDED !important;
+    color: #BDBDBD !important;
+}

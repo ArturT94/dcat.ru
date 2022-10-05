@@ -1,0 +1,355 @@
+.shop {
+    margin-top: 39px;
+}
+
+.shop .section-flex-container {
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 1200px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.shop .sidebar {
+    margin-right: 30px;
+    flex: 0 0 270px;
+    min-width: 1px;
+}
+
+.filter {
+    border-top: 1px solid #DAE0E3;
+}
+.filter:last-child {
+    border-bottom: 1px solid #DAE0E3;
+}
+
+.filter-all {
+    margin-top: 17px;
+    margin-bottom: 50px;
+    text-align: center;
+    border-top: none;
+}
+.filter-all-up {
+    margin-top: 4px;
+    margin-bottom: 17px;
+    text-align: center;
+    border-top: none;
+}
+.filter-all-burger-up {
+    margin-top: 17px;
+}
+
+.filter-all-svg,
+.filter-all-svg-burger,
+.filter-all-svg-up,
+.filter-all-svg-burger-up {
+    stroke: #A4A4A4;
+    fill: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-all-svg:hover,
+.filter-all-svg-burger:hover,
+.filter-all-svg-up:hover,
+.filter-all-svg-burger-up:hover {
+    transform: scale(1.2);
+}
+
+.filter-all-svg.active,
+.filter-all-svg-burger.active {
+    transform: rotate(180deg);
+    transition: all 0.3s ease;
+}
+
+.filter-all-svg-up.active,
+.filter-all-svg-burger-up.active {
+    transform: rotate(-180deg);
+    transition: all 0.3s ease;
+}
+
+.filter-name {
+    padding-left: 10px;
+    padding-right: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 70px;
+    width: 100%;
+    background-color: #fff;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: #3C3C41;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-name h3 i {
+    margin-left: 5px;
+    font-size: 15px;
+    line-height: 140%;
+    color: #3C3C41;
+    opacity: 0.6;
+}
+
+.filter-name svg {
+    margin-top: -3.5px;
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    fill: transparent;
+    stroke: #7B7B7B;
+    transition: all 0.3s ease;
+}
+
+.filter-name.active {
+    color: #006FB6;
+}
+.filter-name.active svg {
+    transform: rotate(180deg);
+    stroke: #006FB6;
+}
+
+.filter-block {
+    padding-left: 10px;
+    margin-bottom: 30px;
+    max-height: 401px;
+    overflow-y: auto;
+    display: none;
+}
+
+.filter-block li {
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.filter-block li a {
+    padding-left: 10px;
+    font-size: 13px;
+    line-height: 120%;
+    color: #5D5D5D;
+    max-width: 250px;
+    transition: all 0.3s ease;
+}
+
+.filter-block a span {
+    margin-left: 15px;
+}
+
+
+/* checkbox */
+.filter-block.filter-checkbox {
+    max-height: 200px;
+}
+
+.filter-item {
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+}
+.filter label {
+    font-size: 13px;
+    line-height: 120%;
+    color: #5D5D5D;
+    cursor: pointer;
+}
+.filter label:hover {
+    color: #006FB6;
+}
+
+.filter input[type="checkbox"]:checked + label {
+    color: #006FB6;
+}
+
+.filter input[type="checkbox"]:checked + label span {
+    color: #5D5D5D;
+}
+
+.filter label span {
+    margin-left: 10px;
+}
+
+.filter input[type="checkbox"] {
+    margin-right: 10px;
+    position: relative;
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
+    color: #363839;
+    border: 2px solid #A4A4A4;
+    border-radius: 2px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: 0;
+    cursor: pointer;
+    -webkit-transition: background 175ms cubic-bezier(0.1, 0.1, 0.25, 1);
+    transition: background 175ms cubic-bezier(0.1, 0.1, 0.25, 1);  
+}
+
+.filter input[type="checkbox"]:before {
+    position: absolute;
+    content: '';
+    display: block;
+    /* top: -1.5px;
+    left: 4px;
+    width: 4px;
+    height: 10px; */
+    top: -1px;
+    left: 4px;
+    width: 7px;
+    height: 13px;
+    border-style: solid;
+    border-color: #fff;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    opacity: 0;
+    border-radius: 4px;
+}
+
+.filter input[type="checkbox"]:checked {
+    color: #fff;
+    border-color: #006FB6;
+    background: #006FB6;
+}
+
+.filter input[type="checkbox"]:checked:before {
+    opacity: 1;
+}
+
+.filter input[type="checkbox"]:checked:before ~ label:before {
+    color: #006FB6;
+}
+
+
+/* фильтры на странице sub-category */
+.filters .filter-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 500px;
+}
+.filters .filter-form input {
+    margin-right: 11px;
+    padding: 10px 10px 10px 10px;
+    background: #FFFFFF;
+    border: 1px solid #7B7B7B;
+    border-radius: 5px;
+    max-width: 98px;
+    height: 35px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 18px;
+    color: #006FB6;
+    flex: 1 1 40%;
+    max-width: 40%;
+    min-width: 1px;
+}
+
+.filters .filter-form button {
+    padding: 0 10px;
+    flex: 1 1 20%;
+    height: 35px;
+    width: 51px;
+    background: #006FB6;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #FFFFFF;
+    flex: 1 1 20%;
+    max-width: 20%;
+    min-width: 1px;
+}
+
+
+.feedback-block-callback {
+    margin-bottom: 100px;
+}
+
+
+/* all hovers */
+.filter-name:hover { color: #006FB6; }
+.filter-name:hover svg { stroke: #006FB6; }
+
+.filter-block li:hover { background-color: #006FB6; }
+.filter-block li:hover a { color: #fff; }
+
+
+@media all and (max-width: 1100px) {
+    .filter-form {
+        max-width: 100%;
+    }
+}
+
+
+
+
+/* .burger-filter {
+    margin-left: 6%;
+    width: 30px;
+    height: 20px;
+    border-radius: 4px;
+    z-index: 1;
+    cursor: pointer;
+
+    position: relative;
+}
+
+.burger-filter span {
+    width: 30px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-left: -15px;
+    margin-top: -1.5px;
+    background-color:black;
+    transition: all 0.4s ease;
+}
+
+.burger-filter span:before {
+    content: '';
+    width: 30px;
+    height: 2px;
+    position: absolute;
+    top: -9px;
+    background-color: black;
+    display: block;
+    transition: all 0.4s ease;
+}
+
+.burger-filter span:after {
+    content: '';
+    width: 30px;
+    height: 2px;
+    position: absolute;
+    top: 9px;
+    background-color: black;
+    display: block;
+    transition: all 0.4s ease;
+}
+
+.click span {
+    background-color: transparent;
+}
+
+.click span::before {
+    margin-top: 10px;
+    left: 0;
+    transform: rotate(135deg);
+}
+
+.click span::after {
+    margin-top: -8px;
+    left: 0;
+    transform: rotate(-135deg);
+} */

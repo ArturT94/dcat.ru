@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://10.252.2.20/soapservice/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="SoapServiceMetaloprofil" targetNamespace="http://10.252.2.20/soapservice/">
+  <types>
+    <xsd:schema targetNamespace="http://10.252.2.20/soapservice/">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+    </xsd:schema>
+  </types>
+  <portType name="SoapServiceMetaloprofilPort">
+    <operation name="summTwoNumber">
+      <documentation>Adds tree numbers.</documentation>
+      <input message="tns:summTwoNumberIn"/>
+      <output message="tns:summTwoNumberOut"/>
+    </operation>
+    <operation name="runSoapMethodRemote">
+      <documentation>Run SOAP service's method remotely.</documentation>
+      <input message="tns:runSoapMethodRemoteIn"/>
+      <output message="tns:runSoapMethodRemoteOut"/>
+    </operation>
+  </portType>
+  <binding name="SoapServiceMetaloprofilBinding" type="tns:SoapServiceMetaloprofilPort">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="summTwoNumber">
+      <soap:operation soapAction="http://10.252.2.20/soapservice/#summTwoNumber"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://10.252.2.20/soapservice/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://10.252.2.20/soapservice/"/>
+      </output>
+    </operation>
+    <operation name="runSoapMethodRemote">
+      <soap:operation soapAction="http://10.252.2.20/soapservice/#runSoapMethodRemote"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://10.252.2.20/soapservice/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://10.252.2.20/soapservice/"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="SoapServiceMetaloprofilService">
+    <port name="SoapServiceMetaloprofilPort" binding="tns:SoapServiceMetaloprofilBinding">
+      <soap:address location="http://10.252.2.20/soapservice/"/>
+    </port>
+  </service>
+  <message name="summTwoNumberIn">
+    <part name="p1" type="xsd:int"/>
+    <part name="p2" type="xsd:int"/>
+    <part name="p3" type="xsd:int"/>
+  </message>
+  <message name="summTwoNumberOut">
+    <part name="return" type="xsd:string"/>
+  </message>
+  <message name="runSoapMethodRemoteIn">
+    <part name="parameters" type="xsd:base64Binary"/>
+  </message>
+  <message name="runSoapMethodRemoteOut">
+    <part name="return" type="xsd:base64Binary"/>
+  </message>
+</definitions>

@@ -1,0 +1,343 @@
+.section-cart-row {
+    justify-content: flex-end;
+}
+.col-9 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.col-10,
+.col-11 {
+    -ms-flex: 0 0 15%;
+    flex: 0 0 15%;
+    max-width: 15%;
+}
+.col-12 {
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.selection-item-cart {
+    display: flex;
+    justify-content: center;
+}
+
+.content-block_tovar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.tovar-delete {
+    margin-left: 35px;
+    /* margin-right: 44px;   */
+    margin-right: 0;
+    cursor: pointer;  
+}
+.tovar-delete > svg {
+    stroke: #A4A4A4;
+    transition: all 0.2s ease;
+}
+
+.tovar-delete:hover > svg {
+    stroke: #006FB6;
+    transform: scale(1.1);
+}
+
+.tovar-delete:hover {
+    
+}
+
+.tovar {
+    display: flex;
+    align-items: center;
+}
+
+.tovar-img {
+    margin-right: 27px;
+    max-width: 99px;
+    max-height: 99;
+}
+
+.tovar-img img {
+    max-width: 100%;
+    height: auto;
+    min-width: 70px;
+}
+
+.tovar-descr_vendor {
+    margin-bottom: 5px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #5D5D5D;
+}
+
+.tovar-descr_name {
+    font-size: 14px;
+    line-height: 20px;
+    color: #006FB6;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.content-block_value,
+.content-block_cost {
+    display: flex;
+    align-items: center;
+}
+.cost-delete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-block_cost {
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.cost-title,
+.value-title,
+.quantity-title {
+    margin-right: 30px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #5D5D5D;
+}
+
+.price-value,
+.cost-value {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    color: #5D5D5D;
+}
+
+.content-block_quantity {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-block {
+    display: flex;
+    align-items: center;
+}
+
+.button-minus,
+.button-plus {
+    border: none;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.button-minus svg,
+.button-plus svg {
+    stroke: #7B7B7B;
+    fill: #fff;
+    transition: all 0.3s ease;
+}
+
+.content-block_quantity:hover .quantity-input {
+    border: 1px solid #006FB6;
+    color: #006FB6;
+}
+
+.button-minus:hover,
+.button-plus:hover {
+    background-color: #006FB6;
+}
+
+.button-minus:hover svg,
+.button-plus:hover svg {
+    stroke: #fff;
+    fill: #fff;
+}
+
+.quantity-input {
+    margin: 0 5px;
+    padding: 7.5px 5px;
+    border: 1px solid #A4A4A4;
+    border-radius: 5px;
+    background-color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #5D5D5D;
+    text-align: center;
+    max-width: 60px;
+}
+
+.quantity-input:focus {
+    border: 1px solid #006FB6;
+    color: #006FB6;
+}
+
+.tovar-descr_name:hover {
+    text-decoration: underline;
+
+}
+
+.content-group_cart {
+    margin-bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* total */
+.total {
+    margin-top: 33px;
+    margin-bottom: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.total-products,
+.total-cost-title {
+    font-size: 16px;
+    line-height: 24px;
+    color: #5D5D5D;
+}
+
+.total-cost-title {
+    margin-bottom: 10px;
+}
+
+.total-cost {
+    margin-bottom: 38px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 24px;
+    color: #5D5D5D;
+}
+
+.total-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.button-continue {
+    margin-right: 10px;
+    padding: 0 30px;  
+    background-color: #fff;
+    border: 2px solid #006FB6;
+    border-radius: 27px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.1px;
+    color: #006FB6;
+    height: 54px;
+    transition: all 0.3s ease;
+}
+
+.button-continue:hover {
+    background: #00578F;
+    box-shadow: 0px 2px 6px rgba(8, 35, 48, 0.18);
+    color: white;
+}
+
+.button-order {
+    padding: 0 50px;
+    background-color: #006FB6;
+    border: 2px solid #006FB6;
+    border-radius: 27px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.1px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 54px;
+    transition: all 0.3s ease;
+}
+
+/* .button-order:hover {
+    background: #00578F;
+    box-shadow: 0px 2px 6px rgba(8, 35, 48, 0.18);
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width: 1000px) {
+    .col-10, .col-11, .col-12 { -ms-flex: 0 0 17%; flex: 0 0 17%; max-width: 17%; }
+    .col-9 { -ms-flex: 0 0 44%; flex: 0 0 44%; max-width: 44%; }
+    .col-12 { -ms-flex: 0 0 22%; flex: 0 0 22%; max-width: 22%; }
+    .tovar-delete { margin-left: 25px; }
+}
+@media all and (max-width: 850px) {
+    .col-10, .col-11, .col-12,.col-9 { -ms-flex: 0 0 100%; flex: 0 0 100%; width: 100%; max-width: 100%; justify-content: flex-start; }
+    .profile-selection { display: none; }
+    .profile-content-row { display: flex; align-items: flex-start; }
+    .content-column { margin-bottom: 0; }
+    .value-title, .cost-title, .quantity-title { margin-right: 0px; min-width: 1px; }
+    .content-sm-column { margin: 0 auto; margin-bottom: 10px; width: 100%; justify-content: space-between;  }
+    .tovar-delete { order: 2; margin-right: 0; margin-left: 10px; }
+    .content-block_tovar { justify-content: flex-start; margin-bottom: 30px; }
+}
+
+@media all and (max-width: 710px) {
+    /* .content-sm-column { margin-right: 30%; } */
+}
+
+@media all and (max-width: 570px) {
+    .content-sm-column { margin-right: 0; }
+    .total-buttons { flex-direction: column; width: 100%; }
+    .button-continue, .button-order {width: 100%; margin-right: 0;}
+    .button-order { margin-top: 15px }
+}
+
+@media all and (max-width: 400px) {
+    .tovar-img { margin-right: 15px; }
+}
+
+@media all and (max-width: 370px) {
+    .total-products, .total-cost-title { font-size: 14px; }
+}
+
+@media all and (min-width: 851px) {
+    .value-title, .cost-title, .quantity-title { display: none; }
+}

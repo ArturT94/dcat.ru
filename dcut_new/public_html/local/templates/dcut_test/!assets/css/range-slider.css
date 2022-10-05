@@ -1,0 +1,131 @@
+.range-slider {
+    width: 100%;
+    max-width: 270px;
+}
+
+.filter__slider {
+    margin: 10px 0 30px 0;
+    padding: 0 10px;
+    max-width: 500px;
+}
+
+/* .filter__more {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #eaeaea;
+    text-transform: none;
+    font-weight: 400;
+    margin-top: -20px;
+    margin-bottom: 25px;
+} */
+
+.filter__more a {
+    text-decoration: none;
+}
+
+.filter__category {
+    margin-bottom: 25px;
+}
+
+.ui-widget.ui-widget-content {
+    border: 0;
+    height: 3px;
+    border-radius: 0;
+    background: #A4A4A4;
+}
+
+.ui-slider-horizontal .ui-slider-range {
+    background: #006FB6;
+}
+
+.ui-slider .ui-slider-handle {
+    width: 20px;
+    height: 20px;
+    top: -8px;
+    border: 2px solid #006FB6;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+}
+.ui-slider .ui-slider-handle:first-of-type {
+    background: #ffffff url(../img/category-shop/range-left.svg) no-repeat center;
+}
+.ui-slider .ui-slider-handle:last-of-type {
+    background: #ffffff url(../img/category-shop/range-right.svg) no-repeat center;
+}
+
+.ui-slider .ui-slider-handle:focus {
+    outline: none;
+}
+
+
+.price-range-min,
+.price-range-max {
+    display: none;
+}
+
+.price-range-max {
+    left: -20px;
+    text-align: right;
+}
+
+.range__zero {
+    font-size: 0.625rem;
+    color: #a9a9a9;
+    position: absolute;
+    margin-top: 9px;
+    z-index: 5;
+}
+
+.range-slider .wrap {
+    display: flex;
+    align-items: center;
+    max-width: 500px;
+}
+
+.range-slider .wrap button {
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 100%;
+    background: #006FB6;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #FFFFFF;
+    flex: 1 1 20%;
+    max-width: 20%;
+    transition: all 0.1s ease;
+}
+.range-slider .wrap button:hover {
+    background-color: #00578F;
+    box-shadow: 0px 2px 6px rgba(8, 35, 48, 0.18);
+    color: #ffffff;
+}
+
+.input-range {
+    margin-right: 11px;
+    padding: 10px 10px 10px 10px;
+    /* max-width: 98px; */
+    background: #FFFFFF;
+    border: 1px solid #7B7B7B;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    height: 35px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 18px;
+    color: #006FB6;
+    flex: 1 1 40%;
+    max-width: 40%;
+    min-width: 1px;
+}
+
+@media all and (max-width: 1100px) {
+    .range-slider { max-width: 100%; }
+}

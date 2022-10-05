@@ -1,0 +1,47 @@
+.application {
+    padding-top: 40px;
+    padding-bottom: 75px;
+    position: relative;
+}
+
+.application-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.application-text {
+    font-size: 14px;
+    line-height: 20px;
+    color: #47474D;
+    max-width: 875px;
+    flex: 1 1 70%;
+}
+
+.application-button {
+    margin-left: 40px;
+    margin-bottom: 15px;
+    padding: 16px 37px 16px 37px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.1px;
+    min-width: 231px;
+    color: #FFFFFF;
+    background: #006FB6;
+    border-radius: 27px;
+    border: none;
+    transition: all 0.2s;
+}
+.application-button:hover {
+    background: #00578F;
+    animation: pulse 3s linear infinite;
+    box-shadow: 0px 2px 6px rgba(8, 35, 48, 0.18);
+}
+@media all and (max-width: 1150px) {
+    .application-container { flex-direction: column; }
+    .application-button { margin-left: 0; margin-top: 30px; }
+}
+@media all and (max-width: 500px) {
+    .application-button { width: 100%; }
+}

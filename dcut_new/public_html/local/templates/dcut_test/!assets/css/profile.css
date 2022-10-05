@@ -1,0 +1,189 @@
+/* header */
+.profile-page {
+    padding-bottom: 0;
+    height: auto;
+    position: relative;
+    z-index: 111;
+    /* background: url(../img/profile/profile-bg.jpg) no-repeat center;
+    background-size: cover; */
+
+}
+
+.headline {
+    margin-top: 30px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    background: linear-gradient(90deg, rgb(24, 24, 24, 0.8) 9.9%, rgba(123, 123, 123, 0) 100%);
+}
+
+.profile-head-container {
+    padding: 0 15px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.profile-block-titles {
+    margin-left: 31px;
+    flex: 1 1 auto;
+}
+
+.profile-title {
+    padding-top: 18px;
+    margin-bottom: 7px;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 39px;
+    color: #FFFFFF;
+}
+
+.profile-subtitle {
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 27px;
+    color: #FFFFFF;
+}
+
+.headline-descr {
+    padding-top: 18px;
+    padding-bottom: 46px;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+    color: #FFFFFF;
+    max-width: 230px;
+}
+
+.profile-nav-links {
+    margin-bottom: 39px;
+}
+.profile-main-nav-links {
+    margin-bottom: 0;
+    padding: 0 0 10px 0;
+}
+
+.profile-main-title {
+    margin-bottom: 30
+}
+
+.profile-main-title .title {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.profile-main-title .title h3 {
+    position: relative;
+    width: max-content;
+    cursor: pointer;
+}
+
+.profile-main-title .title h3 > svg {
+    margin-bottom: 3px;
+    margin-left: 10px;
+    fill: #7b7b7b;
+    transition: all 0.3s ease;
+}
+
+
+
+/* dropdown */
+.profile-dropdown {
+    box-shadow: 0px 2px 6px rgba(8, 35, 48, 0.18);
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: 1px solid #006FB6;
+    position: absolute;
+    top: 170%;
+    left: 0;
+    width: 311px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 111;
+
+    transition: all 0.3s ease;
+}
+
+.dropdown-item {
+    padding: 0.25em 10px;
+    display: flex;
+    align-items: center;
+    min-height: 38px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.dropdown-item a {
+    margin-left: 15px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 140%;
+    color: #5D5D5D;
+    transition: all 0.3s ease;
+}
+
+.profile-dropdown .dropdown-item svg {
+    stroke: #5D5D5D;
+    fill: transparent;
+    transition: all 0.3s ease;
+    transform: rotate(0);
+}
+
+.profile-dropdown .hidden-arrow {
+    position: absolute;
+    top: 50%;
+    right: 19px;
+    margin-top: -3.5px;
+    fill: transparent;
+    stroke: #7B7B7B;
+    transition: all 0.3s ease;
+}
+
+/* появление dropdown */
+.profile-main-title .title h3:hover .profile-dropdown { top: 120%; opacity: 1; visibility: visible; background: rgb(255, 255, 255, 0.97); }
+.dropdown-item:hover { background: rgba(0, 111, 182, 0.1); }
+.dropdown-item:hover a { color: #006FB6; }
+.dropdown-item:hover svg { stroke: #006FB6; }
+.dropdown-item:hover .hidden-arrow { stroke: #006FB6; transform: rotate(180deg); }
+.profile-main-title .title h3:hover > svg { transform: rotate(180deg); fill: #006FB6; }
+
+
+
+
+
+
+
+@media all and (max-width: 800px) {
+    .profile-title { font-size: 28px; margin-bottom: 3px; }
+    .profile-subtitle { font-size: 20px; }
+    .headline-descr { font-size: 15px; max-width: 215px; }
+}
+@media all and (max-width: 700px) {
+    .profile-title { font-size: 23px; margin-bottom: 0; }
+    .profile-subtitle { font-size: 18px; }
+    .headline-descr { font-size: 13px; max-width: 200px; padding-bottom: 46px; }
+    .profile-main-title { flex-direction: column; width: 100%; }
+    .content-titles__button { position: static; width: 100%; }
+    .profile-main-title .title { width: 100%; margin-bottom: 0; }
+}
+@media all and (max-width: 640px) {
+    .profile-title { font-size: 23px; margin-bottom: 0; }
+    .profile-subtitle { font-size: 18px;  }
+    .headline-descr { font-size: 13px; max-width: 300px; padding-bottom: 30px; margin-left: 31px; text-align: left; }
+    .headline { flex-direction: column; }
+}
+
+@media all and (max-width: 500px) {
+    .profile-main-title .title { font-size: 19px; padding: 14px 0 13px 10px; }
+}
+
+@media all and (max-width: 400px) {
+    .profile-head-container {  padding: 0; margin: 0 auto; background: linear-gradient(90deg, rgb(24, 24, 24, 0.8) 9.9%, rgba(123, 123, 123, 0) 100%); }
+    .headline { background-color: transparent; }
+    .profile-block-titles,
+    .headline-descr { margin-left: 15px; }
+    .profile-title { font-size: 21px; }
+    .profile-dropdown { left: 0; width: 270px; }
+}

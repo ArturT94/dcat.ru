@@ -1,0 +1,389 @@
+.burger {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    /* top: -76px; */
+    top: -78px;
+    right: 15px;
+    border-radius: 4px;
+    z-index: 100000000;
+    cursor: pointer;
+} 
+
+.burger span {
+    width: 30px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-left: -15px;
+    margin-top: -1.5px;
+    background-color: var(--main-white);
+    transition: all 0.4s ease;
+}
+.burger span:before {
+    content: '';
+    width: 30px;
+    height: 2px;
+    position: absolute;
+    top: -9px;
+    background-color: var(--main-white);
+    display: block;
+    transition: all 0.4s ease;
+}
+.burger span:after {
+    content: '';
+    width: 30px;
+    height: 2px;
+    position: absolute;
+    top: 9px;
+    background-color: var(--main-white);
+    display: block;
+    transition: all 0.4s ease;
+}
+.click span {
+    background-color: transparent;
+}
+.click span::before {
+    margin-top: 10px;
+    left: 0;
+    transform: rotate(135deg);
+}
+.click span::after {
+    margin-top: -8px;
+    left: 0;
+    transform: rotate(-135deg);
+}
+
+
+/* МОБИЛЬНОЕ МЕНЮ
+ ==================================================== */
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 370px;
+    height: 100%;
+    background-color: #fff;
+    overflow: hidden;
+    overflow-y: auto;
+    z-index: 9999999999999;
+    transform: translateX(-100%); 
+    transition: transform .55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+.mobile-nav.show {
+    transform: translateX(0);
+}
+.mobile-nav__info {
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--main-blue);
+    position: relative;
+    /* backdrop-filter: blur(9px); */
+}
+
+.close-burger {
+    position: absolute;
+    top: 26px;
+    right: 23px;
+    stroke: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.logIn {
+    padding: 11px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    
+}
+.login-icon img {
+    padding-right: 20px;
+}
+.logIn-info a {
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.1px;
+    color: white;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.logIn-info a:hover {
+    transform: translateX(10px);
+}
+
+.info-order {
+    display: flex;
+    align-items: center;
+}
+.info-order a {
+    margin-right: 20px;
+    position: relative;
+}
+
+.info-order a img {
+    max-width: 100%;
+}
+
+.info-order a:last-child {
+    margin-right: 0;
+}
+
+.info-order img {
+    max-height: 20px;
+}
+.info-order a .circle {
+    position: absolute;
+    border-radius: 50%;
+    top: -50%;
+    right: -50%;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-order a .circle span {
+    margin-bottom: -9px;
+    font-weight: 600;
+    color: var(--main-blue);
+    font-size: 11px;
+    border-radius: 50%;
+    height: 100%;
+}
+.order-item {
+    margin-left: 20px;
+}
+.order-item img {
+    max-width: 100%;
+}
+.order-item:nth-child(2) {
+    position: relative;
+}
+.order-item:nth-child(2):after {
+    padding: 4px;
+    content: '25';
+    position: absolute;
+    color: var(--main-blue);
+    font-size: 10px;
+    font-weight: 600;
+    background-color: var(--main-white);
+    border-radius: 50%;
+    top: -50%;
+    right: -50%;
+}
+
+/* TABS (ВКЛАДКИ В БУРГЕРЕ)
+========================================================== */
+/* вкладки */
+.mobile-menu-tabs {
+    display: flex;
+    align-items: center;
+}
+.mobile-menu-tabs .tab {
+    padding: 20px 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.1px;
+    background-color: var(--main-white);
+    color: black;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+.mobile-menu-tabs .tab:hover {
+    color: var(--main-blue);
+    background-color: #f8f8f8;
+}
+.mobile-menu-tabs .tab.active {
+    color: var(--main-blue);
+    background-color: #f8f8f8;
+}
+/* CONTENT МЕНЮ (ВКЛАДКА МЕНЮ И КАТАЛОГ В БУРГЕРЕ)
+==================================================== */
+.mobile-menu {
+    background-color: var(--main-white);
+}
+.menu-element__title {
+    padding: 20px 15px;
+    font-size: 17px;
+    font-weight: 500;
+    color: black;
+    position: relative;
+    cursor: pointer;
+    border-bottom: 1px solid #e9e9e9;
+    transition: all 0.2s ease;
+}
+.menu-element__title:hover {
+    background-color: rgba(0, 111, 182, 0.1);
+}
+.menu-element__title > a {
+    color: black;
+    transition: all 0.2s ease;
+}
+.menu-element__title:hover,
+.menu-element__title:hover > a {
+    color: var(--main-blue); 
+}
+
+.menu-element__title.dropdown.active {
+    /* color: rgba(0, 111, 182, 0,1); */
+    background-color: rgba(0, 111, 182, 0.1);
+}
+/* СТРЕЛКИ В ЭЛЕМЕНТАХ МЕНЮ В БУРГЕРЕ
+========================================================== */
+.menu-element__title.dropdown:before, 
+.menu-element__title.dropdown:after {
+    content: '';
+    width: 7px;
+    height: 1px;
+    background-color: black;
+    position: absolute;
+    top: 29px;
+    transition: all 0.4s ease;
+}
+.menu-element__title.dropdown:before {
+    transform: rotate(-40deg);
+    right: 10px;
+}
+.menu-element__title.dropdown:after {
+    transform: rotate(40deg);
+    right: 15px;
+}
+.menu-element__title.dropdown.active:before,
+.menu-element__title.dropdown.active:after {
+    background-color: black;
+}
+.menu-element__title.dropdown.active:before {
+    transform: rotate(40deg);
+}
+.menu-element__title.dropdown.active:after {
+    transform: rotate(-40deg);
+}
+.menu-element__info {
+    display: none;
+}
+.menu-element__info a {
+    padding: 15px 20px 15px 20px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    text-decoration: none;
+    display: block;
+    color: black;
+    border-bottom: 1px solid #e9e9e9;
+    transition: all 0.4s ease;
+}
+.menu-element__info a:hover {
+    color: var(--main-blue);
+    background-color: rgba(0, 111, 182, 0.1);
+}
+/* LANGUAGES (БЛОК С ПЕРЕКЛЮЧЕНИЕМ ЯЗЫКОВ)
+======================================================== */
+.mobile-nav__languages {
+    border-bottom: 1px solid #e9e9e9;
+}
+.languages-item {
+    padding: 15px 15px;
+    font-size: 15px;
+    color: black;
+    transition: all 0.4s ease;
+    display: block;
+}
+.languages-item:hover {
+    color: var(--main-blue);
+}
+
+/* ДОПОЛНИТЕЛЬНАЯ ИНФОРМАЦИЯ В БЕРГЕРЕ 
+(номер телефона, адрес, график работы)
+======================================================== */
+.additional-info {
+    background-color: var(--main-blue);
+}
+
+.info-title,
+.info-link {
+    padding: 15px 15px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    color: var(--main-white);
+    transition: all 0.4s ease;
+
+}
+.info-title {
+    padding-bottom: 5px;
+}
+.info-link {
+    padding: 0 15px 15px 15px;
+    border: none;
+    font-weight: 400;
+    border-bottom: 1px solid #e9e9e9;
+}
+.info-link span {
+    padding-right: 5px;
+}
+.info-link a {
+    padding-left: 5px;
+    color: var(--main-white);
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
+.info-link a:hover {
+    padding: 2px 7px;
+    background-color: #fff;
+    border-radius: 20px;
+    color: var(--main-blue);
+}
+
+/* OVERLAY (ЗАТЕМЕНИЕ СТРАНИЦЫ ПРИ ОТКРЫТИИ БУРГЕРА) 
+============================================================ */
+
+.overlay,
+.overlay-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height:100%;
+    transition: all 0.4s ease;
+    background-color: black;
+    opacity: 0;
+    visibility: hidden;
+   
+}
+.overlay.show,
+.overlay-popup.show {
+    opacity: 0.8;
+    visibility: visible;
+}
+
+
+/* @MEDIA
+=========================================================== */
+@media all and (min-width: 1151px) {
+    .burger { display: none; }
+}
+@media all and (max-width: 850px) {
+    .burger { top: -76px; right: 15px; }
+}
+@media all and (max-width: 576px) {
+    .burger { top: -70px; }
+}
+@media all and (max-width: 510px) {
+    .burger { top: -62px; }
+}
+
+@media all and (max-width: 450px) {
+    .mobile-nav { width: 100%; max-width: 100%; }
+}
